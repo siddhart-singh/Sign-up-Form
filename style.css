@@ -32,8 +32,6 @@ body {
   top: 15%;
 }
 
-
-
 .main {
   width: 66.666%;
   background-color: rgb(240, 250, 255);
@@ -53,7 +51,7 @@ fieldset {
   font-family: "Josefin Sans", sans-serif;
   background-color: white;
   padding: 32px 128px 32px 64px;
-  box-shadow: 0 0.6rem 4.2rem rgb(0,0,0,.01);
+  box-shadow: 0 0.6rem 4.2rem rgb(0, 0, 0, 0.01);
 }
 
 .fieldset_text {
@@ -84,8 +82,22 @@ fieldset {
   color: rgb(83, 83, 83);
 }
 
+form input{
+  padding: 2px 8px;
+}
+
+form input:invalid,
+input:focus-visible:invalid {
+  border: none;
+  border-radius: 1px;
+  outline: 2px solid rgb(170, 0, 0);
+  background-color: rgba(170, 0, 0, 0.251);
+  outline-offset: 0;
+}
+
+
 .button {
-  padding: 32px;
+  padding: 32px 32px 16px 32px;
 }
 
 .button button {
@@ -98,6 +110,36 @@ fieldset {
   color: white;
   font-weight: bold;
   cursor: pointer;
+  transition: all ease-out 0.1s;
 }
 
-.login_link {}
+.button button:hover,
+.button button:focus,
+.button button:active {
+  outline: 1px solid rgb(0, 116, 225);
+
+  color: rgb(0, 116, 225);
+  background-color: white;
+  box-shadow: 0 0.6rem 1.2rem rgb(0, 0, 0, 0.1);
+}
+
+.login_link {
+  color: black;
+  padding: 0 64px 0 32px;
+  margin: 0;
+  font-family: "Josefin Sans", sans-serif;
+}
+
+.login_link a {
+  color: rgb(0, 116, 225);
+  transition: all ease-out 0.2s;
+  padding: 4px;
+}
+
+.login_link a:hover,
+.login_link a:focus,
+.login_link a:active {
+  background-color: rgb(0, 116, 225);
+  color: white;
+  border-radius: 4px;
+}
